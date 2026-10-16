@@ -23,7 +23,7 @@ ARM is a runtime manager for local AI agents (Claude Code / Codex). Instead of b
 ## Quick Start
 
 ```bash
-git clone https://github.com/ShawnYoung-21/Agent-Runtime-Manager.git
+git clone https://github.com/yangchaoxin-shawn/Agent-Runtime-Manager.git
 cd Agent-Runtime-Manager
 uv sync                                   # create env
 uv run --with pytest python -m pytest -q  # full test suite
