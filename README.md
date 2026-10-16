@@ -1,5 +1,10 @@
 # Agent Runtime Manager (ARM)
 
+> **项目状态（2026-10-16）**：已搁置，不再维护。本仓库由工作账号 Transfer 至个人开源号，是唯一存档。
+> 功能已按设计目标完整实现并实测（Windows 11 S0 现代待机机型上"合盖+电池任务全速跑、任务停自动释放"闭环可用，含 Codex 四路信号判定与网络分层诊断）。
+> 开发期在本机部署的系统级组件（计划任务看门狗、hooks 哨兵、全局命令、桌面启动器）已随搁置全部卸载，系统恢复默认。
+> 若要在你自己的机器上复现，直接按下文 Quick Start 部署即可。
+
 **[中文说明在下方](#中文说明)**
 
 Keep your AI agents running at full speed — even with the laptop lid closed on battery.
@@ -46,6 +51,8 @@ Daily use: **close the lid and walk away.** That's it. Quit the app when you wan
 ---
 
 # 中文说明
+
+> **项目状态（2026-10-16）**：已搁置不再维护，本仓库是唯一存档。设计目标已完整实现并实测，本机部署的系统级组件已全部卸载。想用或想接着做，按下面"安装与开发"自行部署。
 
 面向本地 AI Agent（Claude Code / Codex）的**运行时管理层**——合盖+电池场景下，Agent 任务像开盖插电一样全速运行；任务结束自动释放一切。生命周期驱动，不是无脑防睡眠工具。
 

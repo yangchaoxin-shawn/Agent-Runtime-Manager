@@ -175,6 +175,14 @@ ls "$env:USERPROFILE\.arm"
 5. 恢复合盖动作（见第 7 项命令）
 6. 删 `~/.arm` 整个目录
 
+### 13. 项目搁置 + 彻底卸载（2026-10-16 登记，用户拍板）
+
+- **是什么**：项目转至开源号 `yangchaoxin-shawn/Agent-Runtime-Manager`（GitHub Transfer，旧地址永久重定向）后搁置，本机不留任何 ARM 痕迹。本条目即为本次卸载的台账登记（兼执行记录）。
+- **范围**：按上文"彻底卸载完整顺序"执行全部 6 步 + 删除项目文件夹本身（C:\Users\yangchaoxin\Desktop\Agent Runtime Manager，559MB，git 已全量推送 9ccd074，无未提交内容）+ 一并删除 output/ 宣传片素材（用户拍板不要）。
+- **执行顺序**：① 停 arm 进程 → ② 删计划任务 ARM-App/ARM-Watchdog → ③ `arm init --undo` 还原 hooks → ④ `uv tool uninstall agent-runtime-manager` → ⑤ 删桌面启动器 → ⑥ 恢复合盖动作=默认 → ⑦ 删 ~/.arm → ⑧ 删项目文件夹（最后删，台账随文件夹一起消失，GitHub README 即档案）。
+- **验收**：`Get-ScheduledTask ARM-App/ARM-Watchdog` 无结果、settings.json 无 arm.exe、`uv tool list` 无 agent-runtime-manager、桌面无启动器、`~/.arm` 不存在、项目文件夹不存在、arm doctor 报命令不存在。
+- **副作用**：合盖动作恢复系统默认（本机睡眠超时本就是永不，实际行为不变）；Claude hooks 哨兵消失（ARM 不再感知会话，属预期）。
+
 ## 2026-09-28 宣传片真实界面录制（临时运行）
 
 - 用途：用户要求重新制作宣传片，加入真实系统操作与运镜。
